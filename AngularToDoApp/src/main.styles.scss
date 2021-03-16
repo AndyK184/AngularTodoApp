@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700|Nunito:400,700");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+$dark-blue: #00334e;
+$blue: #145374;
+$light-grey: #393e46;
+$dark-grey: #222831;
+$light: #e8e8e8;
+
+$family-sans-serif: "Montserrat", sans-serif;
+
+$primary: $dark-blue;
+
+$link: $light-grey;
+$control-border-with: 2px;
+$input-border-color: transparent;
+$input-shadow: none;
+
+html {
+  background: linear-gradient(to right top, $dark-blue, $blue);
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+}

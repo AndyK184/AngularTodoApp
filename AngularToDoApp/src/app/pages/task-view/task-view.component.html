@@ -1,0 +1,33 @@
+<div class="centered-content">
+  <div class="task-manager-container">
+    
+    <div class="task-list-container has-background-light">
+      <h1 class="title has-text-primary">
+        Aufgaben
+      </h1>
+      <div class="input-container">
+            <mat-form-field class="filter">
+              <mat-label class="myLabel">Füge eine Aufgabe hinzu</mat-label>
+              <input  matInput color="accent" type="text" [(ngModel)]="input" (keyup.enter)="addEntry()" cdkFocusInitial>
+            </mat-form-field>
+            <button mat-button class="addEntryButton" color="accent" (click)="addEntry()" >Eintrag hinzufügen</button>
+        </div>
+        <div class="list-entry-container">
+      <ul>
+        <li class="task"  *ngFor="let toDo of taskList, let i = index" [ngClass]="{'complete' : toDo.isDone}" (click)="changeDoneState(i)">
+            <p>{{toDo.name}}</p> 
+            <div class="EntryDeleteButtonContainer">
+              <button mat-button class="EntryDeleteButton" (click)="deleteEntry(i)">
+                <div class="icon">
+                  <span class="material-icons">
+                    delete
+                    </span>
+                </div>
+              </button>
+            </div>
+          </li>
+      </ul>
+</div>
+  </div>
+</div>
+</div>

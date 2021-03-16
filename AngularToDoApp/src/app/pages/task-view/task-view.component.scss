@@ -1,0 +1,165 @@
+@import "../../../main.styles.scss";
+
+.centered-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.task-manager-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  max-width: 600px;
+  max-height: 680px;
+  flex-flow: row wrap;
+  height: 100vh;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.task-list-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 42px;
+  border-radius: 8px;
+}
+
+.title {
+  font-family: "Lato";
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.list-menu {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  flex-grow: 1;
+
+  .list-menu-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 5px;
+    width: 100%;
+    color: #5f5f5f;
+    margin-bottom: 5px;
+
+    &:hover {
+      background: $light;
+    }
+    &.is-active {
+      background-color: #cff8ef;
+      color: $dark-grey;
+    }
+  }
+}
+.list-entry-container {
+  display: inline-flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.task {
+  display: flex;
+  background: linear-gradient(to right top, $dark-blue, $blue);
+  padding: 15px 20px;
+  color: #e8e8e8;
+  font-size: 20px;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+  align-items: center;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  &:active {
+    transform: scale(0.95);
+  }
+  &:hover {
+    box-shadow: 0 0 0 5px #5588a3;
+  }
+
+  &.complete {
+    text-decoration: line-through;
+    opacity: 0.4;
+  }
+
+  p {
+    margin-bottom: 0;
+    padding-top: 0;
+  }
+
+  .icon {
+    padding: 0;
+    margin: 0;
+    height: 0px;
+  }
+
+  .EntryDeleteButtonContainer {
+    margin-left: auto;
+  }
+}
+
+.mat-form-field {
+  width: 40%;
+  margin-right: 10%;
+}
+
+::ng-deep .mat-form-field-underline,
+::ng-deep .mat-form-field-ripple {
+  background-color: $blue !important;
+  color: $blue !important;
+}
+
+::ng-deep .mat-form-field-empty.mat-form-field-label,
+.mat-input-element {
+  color: $blue !important;
+}
+
+::ng-deep.mat-form-field-ripple {
+  /*change color of underline when focused*/
+  background-color: $blue !important;
+}
+
+::ng-deep .mat-focused .mat-form-field-label,
+::ng-deep .mat-un-focused .mat-form-field-label {
+  /*change color of label*/
+  color: $blue !important;
+}
+
+.mat-button {
+  color: #e8e8e8;
+  background-color: $blue;
+  border-radius: 8px;
+
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+
+  &:active {
+    transform: scale(0.85);
+  }
+  &:hover {
+    box-shadow: 0 0 0 5px #5588a3;
+  }
+}
+
+.EntryDeleteButton {
+  background: (rgba(255, 255, 255, 0));
+}
+
+::ng-deep .mat-snack-bar-container {
+  color: $blue !important;
+}
